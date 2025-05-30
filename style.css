@@ -75,6 +75,30 @@
   text-align: center;
   font-size: 20px;
   padding-top: 10px;
+   animation: color 3s ease-in-out infinite alternate;
+
+}
+@keyframes color {
+  0% {
+    background-color: orange;
+    border-radius: 7px;
+  }
+  20% {
+    background-color: pink;
+    border-radius: 14px;
+  }
+  40% {
+    background-color: red;
+    border-radius: 28px;
+  }
+  60% {
+    background-color: violet;
+    border-radius: 38px;
+  }
+  100% {
+    background-color: skyblue;
+    border-radius: 50%;
+  }
 }
 .navbar {
   display: flex;
@@ -82,21 +106,24 @@
 }
 .side-bar {
   width: 15vw;
-  background-color: white;
+  background-color: rgb(45, 44, 44);;
   height: 100vh;
   position: fixed;
   padding-top: 70px;
   margin-top: 10px;
 }
 li {
-  padding-top: 25px;
+ padding-top: 40px;
   border: 2px solid transparent;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
+  background-color: rgb(45, 44, 44);
+  color: white;
 }
 li:hover {
-  border-color: blue;
-  border-radius: 10px;
+   border-radius: 10px;
+  background-color: beige;
+  color: black;
 }
 .content {
   margin-top: 20px;
@@ -108,3 +135,62 @@ li:hover {
   color: white;
   padding-top: 70px;
 }
+.box3 {
+  height: 100vh;
+  width: 15vw;
+  overflow: auto;
+  position: relative;
+  overscroll-behavior-block: contain;
+}
+.box4 {
+  background-color: rgb(45, 44, 44);
+  color: white;
+  margin: 0;
+  width: 15vw;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+hr {
+  height: 5px;
+  width: 15vw;
+  background: linear-gradient(to right, red, green, blue, pink);
+  animation: change 3s ease-in-out infinite alternate;
+}
+@keyframes change {
+  0% {
+    background: linear-gradient(to right, red, green, blue, pink);
+  }
+  40% {
+    background: linear-gradient(
+      to right,
+      rgb(128, 7, 233),
+      rgb(183, 17, 64),
+      rgb(184, 7, 228),
+      rgb(215, 243, 6)
+    );
+  }
+  70% {
+    background: linear-gradient(
+      to right,
+      rgb(208, 113, 12),
+      rgb(6, 242, 191),
+      rgb(3, 13, 143),
+      rgb(144, 3, 50)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to right,
+      rgb(249, 80, 2),
+      rgb(77, 1, 148),
+      rgb(232, 10, 47),
+      rgb(246, 246, 10)
+    );
+  }
+}
+h4,
+h3 {
+  color: white;
+}
+
